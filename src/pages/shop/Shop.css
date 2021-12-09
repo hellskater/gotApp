@@ -1,0 +1,106 @@
+.shop {
+  background-color: rgb(24, 24, 24);
+  color: white;
+}
+
+.shop a {
+  text-decoration: none;
+}
+
+.logo {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.logo:hover {
+  color: lightgray;
+}
+
+.authorHeader {
+  text-align: center;
+  padding: 30px;
+}
+
+.authorName {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.image {
+  display: flex;
+}
+
+.author {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.quotes {
+  height: 100%;
+  width: 50%;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 8px;
+  line-height: 20px;
+}
+
+.banner {
+  padding: 1.2rem;
+  padding-top: 1.8rem;
+  background-color: #f2f5ff;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+}
+
+.booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f2f5ff;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .authorName {
+    visibility: hidden;
+  }
+  .authorHeader {
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: inherit;
+  }
+
+  .image {
+    display: none;
+  }
+  .quotes {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .quotes {
+    visibility: hidden;
+  }
+
+  .image {
+    position: relative;
+  }
+
+  .author {
+    position: absolute;
+    width: 100%;
+  }
+}

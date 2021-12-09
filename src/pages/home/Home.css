@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header .logo {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header .logo:hover {
+  color: lightgray;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase.active {
+  right: 300px;
+  background-image: url(../../assets/snow-img/1.png),
+    url(../../assets/snow-img/2.png), url(../../assets/snow-img/3.png);
+  animation: animate 9s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(199, 248, 126);
+  mix-blend-mode: overlay;
+}
+.text {
+  position: relative;
+  z-index: 10;
+  margin-top: 200px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.text p {
+  font-size: 0.7em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+  line-height: 30px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1.3em;
+  background: rgba(255, 255, 255, 0.774);
+  padding: 20px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  transition: 0.2s;
+  border-radius: 15px;
+}
+
+.text a:hover {
+  letter-spacing: 8px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(41, 41, 41);
+  background-image: url(../../assets/snow-img/1.png),
+    url(../../assets/snow-img/2.png), url(../../assets/snow-img/3.png);
+  animation: animate 9s linear infinite;
+}
+
+.menu ul {
+  position: relative;
+}
+.menu ul li {
+  list-style: none;
+  padding: 20px;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: whitesmoke;
+  transition: 0.2s;
+}
+.menu ul li a:hover {
+  color: grey;
+  letter-spacing: 6px;
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .text a {
+    padding: 8px 28px;
+    width: 200px;
+    text-align: center;
+  }
+  .text a:hover {
+    letter-spacing: 5px;
+  }
+  .menu {
+    width: 200px;
+  }
+  .menu ul li a {
+    font-size: 15px;
+  }
+  .showcase {
+    padding: 30px;
+  }
+  .showcase.active {
+    right: 200px;
+  }
+}
