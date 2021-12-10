@@ -1,0 +1,52 @@
+/* PARENT CONTAINER */
+.modal {
+  background-color: rgb(22, 22, 22);
+  height: 80%;
+  border-radius: 20px;
+  color: whitesmoke;
+  margin: 0 auto;
+  padding: 1.8em;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6em;
+  text-align: center;
+  transition: height 5s ease-out 0;
+  -webkit-overflow-scrolling: touch;
+  @media (min-width: 60em) {
+    height: 75%;
+    margin: 5% auto;
+    max-height: 57em;
+    max-width: 66em;
+    width: 85%;
+  }
+}
+
+h1 {
+  font-size: 1.5em;
+  padding: 2em;
+  line-height: 1.6em;
+}
+
+.header {
+  padding: 0.8em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.answer {
+  font-size: 0.65em;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 448px) {
+  h1 {
+    font-size: 0.4em;
+    padding: 1.2em;
+    line-height: 1.2em;
+  }
+
+  .header {
+    font-size: 0.8em;
+  }
+}

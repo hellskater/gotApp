@@ -1,0 +1,151 @@
+/* Parent container */
+.explores {
+  background: url(../../assets/background.jpg) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.logo:hover {
+  color: lightgray;
+}
+
+/* Card container */
+.house-lists {
+  display: flex;
+}
+
+/* Individual cards */
+.house {
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 550px;
+  background-size: auto 105%;
+  background-position: center;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 1);
+  min-width: 100px;
+  transition: 0.5s ease;
+  margin: 15px;
+}
+
+/* Card backgrounds as per the house */
+.house.stark {
+  background-image: url(../../assets/houses/stark.jpg);
+}
+
+.house.targaryen {
+  background-image: url(../../assets/houses/targarean.jpg);
+}
+
+.house.lannister {
+  background-image: url(../../assets/houses/lannister.jpg);
+}
+
+.house.baratheon {
+  background-image: url(../../assets/houses/baratheon.jpg);
+}
+
+.house.tyrell {
+  background-image: url(../../assets/houses/tyrell.jpg);
+}
+
+.house.martell {
+  background-image: url(../../assets/houses/martell.jpg);
+}
+
+.house.tully {
+  background-image: url(../../assets/houses/tully.jpg);
+}
+
+.house:hover {
+  min-width: 600px;
+  background-size: auto 100%;
+  border-radius: 10px;
+}
+.house-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.house::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  transition: 0.5s ease;
+}
+.house:hover::before {
+  background: none;
+}
+.house-name {
+  color: #fff;
+  transform: rotate(-90deg);
+  font-size: 50px;
+  letter-spacing: 2px;
+  transition: 0.5s ease;
+  max-width: 100%;
+  margin-bottom: 120%;
+}
+.house:hover .house-name {
+  transform: rotate(0deg);
+  margin-bottom: 3%;
+  margin-left: 20%;
+  padding: 13px 20px;
+  background-color: rgb(93, 91, 91);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*  RESPONSIVENESS - Media Queries */
+@media only screen and (max-width: 768px) {
+  .house-lists {
+    flex-direction: column;
+  }
+  .house {
+    width: 230px;
+    height: 40px;
+    background-size: auto 600%;
+    min-height: 40px;
+    margin: 12px;
+  }
+  .house:hover {
+    min-width: 250px;
+    height: 140px;
+  }
+
+  .house-name {
+    color: #fff;
+    transform: initial;
+    font-size: 17px;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+    max-width: 100%;
+    margin-bottom: 8px;
+    margin-left: 20px;
+  }
+
+  .logo {
+    font-size: 15px;
+    top: 10px;
+    left: 60px;
+    margin-bottom: 10px;
+  }
+}

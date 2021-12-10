@@ -1,12 +1,10 @@
 /*===== VARIABLES CSS =====*/
 :root {
   /*===== Colores =====*/
-  --first-color: #f2a20c;
   --white-color: #e9eaec;
   --dark-color: #333333;
   --dark-color-lighten: #f2f5ff;
   /*===== Fuente y tipografia =====*/
-  --body-font: "Poppins", sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 1rem;
@@ -106,10 +104,15 @@ img {
   font-weight: 600;
   transition: 0.2s;
   opacity: 0;
+  cursor: pointer;
 }
 
 .card__button:hover {
   box-shadow: 0 18px 40px -12px rgb(255, 250, 234);
+}
+
+.card__button:active {
+  transform: scale(0.7);
 }
 
 .card__img,
@@ -142,6 +145,8 @@ img {
   transition-delay: 0.2s;
   opacity: 1;
 }
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
   .container {
