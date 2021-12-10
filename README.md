@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Run Locally
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Move into the root directory and run `npm install`
 
-## Available Scripts
+# Live demo
 
-In the project directory, you can run:
+- Here is the live demo of the project hosted on Vercel. [https://got-app-five.vercel.app/](https://got-app-five.vercel.app/)
 
-### `yarn start`
+# About Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- This is a small Game of Thrones themed site which primarily uses the open API provided by [https://anapioficeandfire.com](https://anapioficeandfire.com)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech-Stack
 
-### `yarn test`
+- React
+- Redux-toolkit
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### External libraries
 
-### `yarn build`
+- react-toastify
+- react-hooks-use-modal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features and pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Homescreen with the GOT background video and menubar.
+2. Explore page with a responsive gallery of all the major houses. After expanding the house you can click on the house name to fetch data related to that particular house from the API and display in on a modal screen.
+3. Shop page with a tribute to the author in the 1st section and in the 2nd section a list of books fetched from the API and option to add them in your cart.
+4. Cart page, which is opened after clicking on the shopping cart icon on the shop page. Here there are options to increase and decrease the quantity, delete an item from cart and clear the cart. The product quantities and total value is also displayed on the right.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Note
 
-### `yarn eject`
+- All the pictures and the video used in the site are static and NOT provided by the API.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Folder Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The `index.html` fie is stored in the public folder.
+- All the code is stored inside the `src` folder.
+- Static files are stored in `src/assets`
+- All the navigable pages are in `src/pages`
+- Individual components are stored in `src/components`
+- All the JS files related to Redux-toolkit is in `src/slices`
+- The routes are defined in the `src/App.js`
+- Since it was a design heavy project, all the CSS files associated with their corresponding pages or components are kept in the same folder wher the particular component/page is.
